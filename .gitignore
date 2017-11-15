@@ -1,0 +1,6 @@
+# Ignore Packages folder
+packages/
+
+# Ignore bin and obj folders
+SlackBoard/bin/
+SlackBoard/obj/
