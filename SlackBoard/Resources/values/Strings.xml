@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">SlackBoard</string>
+  <string name="tab1_courses">Courses</string>
+  <string name="tab2_assessments">Assessments</string>
+  <string name="tab3_chats">Chats</string>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/signInLayout"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:layout_width="580dp"
+        android:layout_height="800dp"
+        android:background="#c8cfd6"
+        android:layout_centerInParent="true"
+        android:id="@+id/relativeContainer">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/relativeContainer"
+            android:id="@+id/imageView1"
+            android:src="@drawable/frontpagelabelbackground"
+            android:scaleType="fitXY" />
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:id="@+id/linearLayout1"
+            android:background="#f1f3f4">
+            <TextView
+                android:text="Sign In."
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:textSize="74sp"
+                android:id="@+id/textView1" />
+            <ImageButton
+                android:src="@android:drawable/ic_menu_help"
+                android:background="@drawable/button"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/imageButton1" />
+            <EditText
+                android:layout_width="450dp"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:textSize="28sp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/textView1"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000"
+                android:backgroundTint="#000000"
+                android:textColorHint="#000000"
+                android:id="@+id/editText1" />
+            <EditText
+                android:inputType="textPassword"
+                android:layout_width="450dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textSize="28sp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/editText1"
+                android:layout_marginTop="15dp"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                android:backgroundTint="#000000"
+                android:id="@+id/editText2" />
+            <TextView
+                android:text="Remember Me?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/editText2"
+                android:layout_marginTop="50dp"
+                android:textColor="#000000"
+                android:id="@+id/textView2" />
+            <Switch
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:switchMinWidth="50dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="2dp"
+                android:id="@+id/switch1" />
+            <Button
+                android:text="Sign In"
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="40sp"
+                android:textColor="#f1f3f4"
+                android:background="#760234"
+                android:id="@+id/loginInBtn" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
