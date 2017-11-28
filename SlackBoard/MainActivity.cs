@@ -30,8 +30,10 @@ namespace SlackBoard
 
         private async void ValidateLogin(object sender, System.EventArgs e)
         {
+            // Getting the REST Service Methods.
             RestService service = new RestService();
 
+            // EditText Objects for Text Control.
             EditText username = FindViewById<EditText>(Resource.Id.usernameTxt);
             EditText password = FindViewById<EditText>(Resource.Id.passwordTxt);
 
@@ -40,9 +42,11 @@ namespace SlackBoard
             if (!(string.IsNullOrWhiteSpace(username.Text) && string.IsNullOrWhiteSpace(password.Text)))
             {
                 try
-                {
+                {                    
+                    // Validating the Login with a Boolean data type.
                     bool isValid = await service.ValidateLoginAsync(username.Text, password.Text);
 
+                    // Storing the Token in a Private File.
                     var tokenFile = Application.Context.GetSharedPreferences("token", FileCreationMode.Private).GetString("token", key.authorizationToken);
 
                     if (isValid)
