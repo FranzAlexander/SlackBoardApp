@@ -9,20 +9,23 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Animation;
 
 using Android.Graphics;
 
 using SlackBoard.Fragments;
 using Android.Graphics.Drawables;
+using Android.Views.Animations;
 
 namespace SlackBoard
 {
-    [Activity(Label = "MainMenu")]
+    [Activity(Label = "Prototype")]
 
     class MainMenu : Activity
     {
         public Fragment currentFragment;
         Stack<Fragment> fragmentStack;
+         
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -31,8 +34,12 @@ namespace SlackBoard
             ActionBar.SetBackgroundDrawable(new ColorDrawable(Color.ParseColor("#9ca9b5")));
             ActionBar.SetStackedBackgroundDrawable(new ColorDrawable(Color.ParseColor("#c8cfd6")));
 
-
+            string[] courseNames = { "English", "Math", "Sport", "Computer Science", "Physics" };
+          
             SetContentView(Resource.Layout.MainMenu);
+
+            ListViews listViews = new ListViews();
+            
 
             CourseFragment courseFragment = new CourseFragment(); ;
             AssessmentFragment assessmentFragment = new AssessmentFragment();
@@ -52,7 +59,7 @@ namespace SlackBoard
 
             var tab = this.ActionBar.NewTab();
             tab.SetText("Courses");
-            
+
             tab.TabSelected += delegate (object sender, ActionBar.TabEventArgs e)
             {
                 ShowFragment(courseFragment);
@@ -70,7 +77,7 @@ namespace SlackBoard
             tab = ActionBar.NewTab();
             tab.SetText("Chat");
             tab.TabSelected += delegate (object sender, ActionBar.TabEventArgs e)
-            { 
+            {
                 ShowFragment(chatFragment);
             };
             ActionBar.AddTab(tab);

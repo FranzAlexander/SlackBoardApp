@@ -13,18 +13,30 @@
         android:layout_centerInParent="true"
         android:id="@+id/relativeContainer">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:src="@drawable/labelbackground"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
             android:layout_above="@id/relativeContainer"
             android:id="@+id/imageView1"
-            android:src="@drawable/frontpagelabelbackground"
             android:scaleType="fitXY" />
+        <TextView
+            android:text="SlackBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imageView1"
+            android:layout_alignLeft="@id/imageView1"
+            android:layout_alignRight="@id/imageView1"
+            android:layout_alignTop="@id/imageView1"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:textColor="#c8cfd6"
+            android:id="@+id/textView3" />
         <RelativeLayout
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_height="420dp"
             android:id="@+id/linearLayout1"
             android:background="#f1f3f4">
             <TextView
@@ -57,7 +69,7 @@
                 android:textColor="#000000"
                 android:backgroundTint="#000000"
                 android:textColorHint="#000000"
-                android:id="@+id/editText1" />
+                android:id="@+id/usernameTxt" />
             <EditText
                 android:inputType="textPassword"
                 android:layout_width="450dp"
@@ -65,19 +77,19 @@
                 android:hint="Password"
                 android:textSize="28sp"
                 android:layout_marginLeft="10dp"
-                android:layout_below="@id/editText1"
+                android:layout_below="@id/usernameTxt"
                 android:layout_marginTop="15dp"
                 android:textColorHint="#000000"
                 android:textColor="#000000"
                 android:backgroundTint="#000000"
-                android:id="@+id/editText2" />
+                android:id="@+id/passwordTxt" />
             <TextView
                 android:text="Remember Me?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="26sp"
                 android:layout_marginLeft="10dp"
-                android:layout_below="@id/editText2"
+                android:layout_below="@id/passwordTxt"
                 android:layout_marginTop="50dp"
                 android:textColor="#000000"
                 android:id="@+id/textView2" />

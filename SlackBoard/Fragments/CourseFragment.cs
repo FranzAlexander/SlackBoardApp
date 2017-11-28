@@ -15,6 +15,7 @@ namespace SlackBoard.Fragments
 {
     public class CourseFragment : Fragment
     {
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -25,8 +26,13 @@ namespace SlackBoard.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
+            // return inflater.Inflate(Resource.Layout.YourFragment, container, false)
+
             return inflater.Inflate(Resource.Layout.CourseFragmentLayout,container,false);
+        }
+
+        private void NextCourseBtn_Click(object sender, EventArgs e)
+        {
             
         }
     }
